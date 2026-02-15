@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bharatam AI - Government Scheme Assistant</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header class="header">
+            <h1>🇮🇳 Bharatam AI</h1>
+            <p class="subtitle">Your AI Assistant for Government Welfare Schemes</p>
+            <div class="language-selector">
+                <label for="language">Language:</label>
+                <select id="language">
+                    <option value="en">English</option>
+                    <option value="hi">हिंदी (Hindi)</option>
+                </select>
+            </div>
+        </header>
+
+        <!-- Chat Container -->
+        <div class="chat-container" id="chatContainer">
+            <div class="messages" id="messages">
+                <!-- Messages will be added here dynamically -->
+            </div>
+        </div>
+
+        <!-- Input Area -->
+        <div class="input-area">
+            <input 
+                type="text" 
+                id="messageInput" 
+                placeholder="Type your message here..."
+                autocomplete="off"
+            >
+            <button id="sendButton">Send</button>
+        </div>
+
+        <!-- Schemes Display Area -->
+        <div class="schemes-container" id="schemesContainer" style="display: none;">
+            <h2>✅ Eligible Schemes</h2>
+            <div id="schemesList"></div>
+        </div>
+    </div>
+
+    <!-- Loading Indicator -->
+    <div class="loading" id="loading" style="display: none;">
+        <div class="spinner"></div>
+        <p>Processing...</p>
+    </div>
+
+    <script src="/static/app.js"></script>
+</body>
+</html>
