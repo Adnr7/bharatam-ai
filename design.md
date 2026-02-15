@@ -238,13 +238,19 @@ class UserProfile:
 class Scheme:
     id: str
     name: str
+    name_translations: Dict[str, str]
     description: str
+    description_translations: Dict[str, str]
     benefits: str
     eligibility: EligibilityCriteria
-    documents_required: List[str]
+    required_documents: List[str]
     application_process: str
-    official_website: str
-    name_translations: Dict[str, str]
+    application_url: Optional[str]
+    office_location: Optional[str]
+    deadline: Optional[datetime]
+    source_url: str
+    last_updated: datetime
+    embedding: Optional[List[float]]
 ```
 
 **EligibilityCriteria:**
@@ -441,7 +447,7 @@ Response: {
 ### Testing
 - **Framework:** pytest 7.4.3
 - **Async:** pytest-asyncio 0.21.1
-- **Property Testing:** hypothesis 6.92.1 (future)
+- **Property Testing:** hypothesis 6.92.1
 
 ### Data
 - **Format:** JSON
@@ -529,7 +535,9 @@ except Exception as e:
 - Data loader (9 tests)
 - Eligibility engine (15 tests)
 - Conversation engine (43 tests)
-- Knowledge base (25 tests)
+- Knowledge base (23 tests)
+- Configuration (4 tests)
+- Main app (4 tests)
 
 ### Integration Tests (Future)
 - API endpoints

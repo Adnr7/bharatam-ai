@@ -20,7 +20,7 @@ class EligibilityEngine:
         "5-8lakh": 800000,
         "above_8lakh": float('inf')
     }
-    
+
     def check_single_scheme(self, user_profile: UserProfile, scheme: Scheme) -> EligibilityResult:
         """
         Check if a user is eligible for a single scheme.
@@ -69,7 +69,7 @@ class EligibilityEngine:
                 is_eligible = False
             else:
                 matching_criteria.append(f"State matches ({user_profile.state})")
-        
+
         # Check education criteria
         if eligibility.education_levels is not None:
             if user_profile.education_level is None:
@@ -104,7 +104,7 @@ class EligibilityEngine:
                 is_eligible = False
             else:
                 matching_criteria.append(f"Category matches ({user_profile.category.upper()})")
-        
+
         # Check gender criteria
         if eligibility.gender is not None:
             if user_profile.gender is None:
@@ -144,7 +144,7 @@ class EligibilityEngine:
             missing_criteria=missing_criteria,
             explanation=explanation
         )
-    
+
     def determine_eligibility(self, user_profile: UserProfile, schemes: List[Scheme]) -> List[EligibilityResult]:
         """
         Determine eligibility for all schemes and return eligible ones.

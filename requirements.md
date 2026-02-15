@@ -165,7 +165,7 @@ A conversational AI assistant that:
 - Redis for session persistence (future)
 - Voice interface (future)
 - Additional regional languages (future)
-- Property-based testing (future)
+- Property-based testing with hypothesis
 
 ---
 

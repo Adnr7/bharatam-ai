@@ -1,15 +1,6 @@
 # Bharatam AI 🇮🇳
 
 > **A conversational AI assistant helping Indian citizens discover government welfare schemes they're eligible for**
-
-[![Tests](https://img.shields.io/badge/tests-44%20passing%20%7C%2025%20pending-yellow)]()
-[![Python](https://img.shields.io/badge/python-3.10%2B-blue)]()
-[![FastAPI](https://img.shields.io/badge/FastAPI-0.115.0-009688)]()
-[![License](https://img.shields.io/badge/license-MIT-blue)]()
-
-**Project Type:** Hackathon MVP (KIRO Student Track)  
-**Status:** ✅ COMPLETE - All Features Implemented & Tested
-
 ---
 
 ## 🎯 The Problem
@@ -80,7 +71,7 @@ python -m uvicorn app.main:app --reload
 # Run all tests
 pytest tests/unit/ -v
 
-# Expected output: 44 passed ✅
+# Expected output: 118 passed ✅
 ```
 
 ### Try the Eligibility Engine
@@ -169,7 +160,7 @@ You meet the following requirements:
 - ✅ **Semantic search** with relevance scoring
 - ✅ **Metadata filtering** (state, category, age)
 - ✅ **Index persistence** (save/load from disk)
-- ✅ **25 comprehensive tests** covering all functionality
+- ✅ **23 comprehensive tests** covering all functionality
 
 **Features:**
 - Search time: <100ms per query
@@ -189,7 +180,7 @@ You meet the following requirements:
 - ✅ **Conversation endpoints** (start, message, get state, end)
 - ✅ **Scheme endpoints** (list, get, search, check eligibility, stats)
 - ✅ **AI status endpoint** (check AI availability)
-- ✅ **9 endpoints** fully functional
+- ✅ **10 endpoints** fully functional
 - ✅ **OpenAPI documentation** at /docs
 - ✅ **CORS enabled** for frontend integration
 
@@ -282,7 +273,7 @@ Both modes work perfectly - AI just makes it more natural!
 ## � Test Coverage
 
 ```
-Total Tests: 112 tests across all modules
+Total Tests: 118 tests across all modules
 Core Tests: 100% passing ✅
 Success Rate: 100%
 ```
@@ -292,7 +283,9 @@ Success Rate: 100%
 - ✅ Data Loader: 9 tests
 - ✅ Eligibility Engine: 15 tests
 - ✅ Conversation Engine: 43 tests
-- ✅ Knowledge Base/RAG: 25 tests
+- ✅ Knowledge Base/RAG: 23 tests
+- ✅ Configuration: 4 tests
+- ✅ Main App: 4 tests
 
 **Run all tests:**
 ```bash
@@ -328,12 +321,15 @@ bharatam-ai/
 │   ├── app.js                   ✅ Frontend logic
 │   └── style.css                ✅ Styling
 ├── tests/
+│   ├── conftest.py              ✅ Test fixtures
 │   └── unit/
 │       ├── test_models.py       ✅ 20 tests
 │       ├── test_data_loader.py  ✅ 9 tests
 │       ├── test_eligibility.py  ✅ 15 tests
 │       ├── test_conversation.py ✅ 43 tests
-│       └── test_knowledge_base.py ✅ 25 tests
+│       ├── test_knowledge_base.py ✅ 23 tests
+│       ├── test_config.py       ✅ 4 tests
+│       └── test_main.py         ✅ 4 tests
 ├── .kiro/specs/bharatam-ai/
 │   ├── requirements.md          ✅ Requirements document
 │   └── design.md                ✅ Design document
@@ -388,7 +384,7 @@ bharatam-ai/
 - ✅ English and Hindi support
 - ✅ Modern web interface
 - ✅ EXPERIMENTAL: AI enhancement layer (optional)
-- ✅ Comprehensive test suite (112 tests)
+- ✅ Comprehensive test suite (118 tests)
 - ✅ Complete documentation (requirements.md, design.md)
 
 ### 🔮 Future Enhancements
@@ -442,7 +438,7 @@ for result in results:
 
 ## 🤝 Contributing
 
-This is a hackathon project for the KIRO Student Track. 
+This is a hackathon project for the AWS X HACK2SKILL. 
 
 **Project Status:** ✅ COMPLETE - All MVP features implemented and tested.
 
@@ -454,27 +450,16 @@ This is a hackathon project for the KIRO Student Track.
 
 ---
 
-## 📝 License
-
-MIT License - See LICENSE file for details
-
----
-
-## 👥 Team
-
-[Your Team Name]  
-Built with ❤️ for KIRO Student Track Hackathon
-
----
-
 ## 🙏 Acknowledgments
 
 - Government of India for open scheme data
-- KIRO for the hackathon opportunity
+- AWS X HACK2SKILL for the hackathon opportunity
 - All contributors and supporters
 
 ---
 
-**Status:** ✅ COMPLETE - All Features Implemented & Tested | Ready for Hackathon Submission 🚀
 
 For detailed specifications, see [requirements.md](requirements.md) and [design.md](design.md)
+
+
+
